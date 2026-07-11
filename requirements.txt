@@ -1,0 +1,6 @@
+Flask
+easyocr
+opencv-python-headless
+ultralytics
+boto3
+PyMySQL

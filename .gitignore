@@ -1,0 +1,10 @@
+venv/
+uploads/
+runs/
+__pycache__/
+*.pyc
+.env
+*.pem
+.aws/
+.vscode/
+*.log

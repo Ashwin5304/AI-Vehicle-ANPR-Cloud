@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud-Based ANPR System</title>
+</head>
+<body>
+
+    <h1>Vehicle Number Plate Detection System</h1>
+
+    <form action="/detect" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="file" required>
+
+        <button type="submit">
+            Detect Number Plate
+        </button>
+
+    </form>
+
+    {% if detected_numbers %}
+
+        <h2>Detected Numbers:</h2>
+
+        <ul>
+
+        {% for number in detected_numbers %}
+
+            <li>{{ number }}</li>
+
+        {% endfor %}
+
+        </ul>
+
+    {% endif %}
+
+</body>
+</html>
