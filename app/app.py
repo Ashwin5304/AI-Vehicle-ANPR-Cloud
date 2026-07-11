@@ -26,10 +26,10 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # RDS Database Configuration
 db = pymysql.connect(
-    host="anpr-db.cp4u6m2cgedr.ap-south-1.rds.amazonaws.com",
-    user="admin",
-    password="llllllll",
-    database="anpr_system"
+    host="YOUR_RDS_ENDPOINT",
+    user="YOUR_DB_USERNAME",
+    password="YOUR_DB_PASSWORD",
+    database="YOUR_DATABASE_NAME"
 )
 
 cursor = db.cursor()
@@ -40,14 +40,14 @@ s3 = boto3.client(
     region_name="ap-south-1"
 )
 
-BUCKET_NAME = "anpr-images-pbl"
+BUCKET_NAME = "YOUR_S3_BUCKET_NAME"
 
 sns = boto3.client(
     "sns",
     region_name="ap-south-1"
 )
 
-TOPIC_ARN = "arn:aws:sns:ap-south-1:585242447255:anpr-alerts"
+TOPIC_ARN = "YOUR_SNS_TOPIC_ARN"
 
 # HOME PAGE
 @app.route('/')
