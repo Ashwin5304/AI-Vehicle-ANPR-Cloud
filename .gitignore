@@ -1,6 +1,5 @@
 venv/
 uploads/
-runs/
 __pycache__/
 *.pyc
 .env
